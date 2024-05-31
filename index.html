@@ -20,11 +20,17 @@
     <main class="notification-main-container">
       <div class="notification-main__text-container">
         <h1 class="notification-main__title">
-          Notifications <span id="notification-count">3</span>
+          Notifications
+          <span id="notification-count" class="notification-main__count"
+            >3</span
+          >
         </h1>
         <p class="notification-main__text">Mark all as read</p>
       </div>
-      <div class="notification-container">
+      <div
+        id="notification_1"
+        class="notification-container notification-container--unread"
+      >
         <img
           src="./assets/images/avatar-mark-webber.webp"
           alt="Mark Webber photo"
@@ -32,13 +38,18 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Mark Webber</span> reacted to your
-            recent post My first tournament today! <span id="mark">🔴</span>
+            <span class="notification__person">Mark Webber</span> reacted to
+            your recent post
+            <span class="notification__info">My first tournament today!</span>
+            <span id="mark" class="notification__mark">🔴</span>
           </p>
           <p class="notification__duration">1m ago</p>
         </div>
       </div>
-      <div class="notification-container">
+      <div
+        id="notification_2"
+        class="notification-container notification-container--unread"
+      >
         <img
           src="./assets/images/avatar-angela-gray.webp"
           alt="Angela Gray photo"
@@ -46,13 +57,16 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Angela Gray</span> followed you
-            <span id="mark">🔴</span>
+            <span class="notification__person">Angela Gray</span> followed you
+            <span id="mark" class="notification__mark">🔴</span>
           </p>
           <p class="notification__duration">5m ago</p>
         </div>
       </div>
-      <div class="notification-container">
+      <div
+        id="notification_3"
+        class="notification-container notification-container--unread"
+      >
         <img
           src="./assets/images/avatar-jacob-thompson.webp"
           alt="Jacob Thompson photo"
@@ -60,21 +74,26 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Jacob Thompson</span> has joined
-            your group Chess Club <span id="mark">🔴</span>
+            <span class="notification__person">Jacob Thompson</span> has joined
+            your group <span class="notification__info">Chess Club</span>
+            <span id="mark" class="notification__mark">🔴</span>
           </p>
           <p class="notification__duration">1 day ago</p>
         </div>
       </div>
-      <div class="notification-container notification-container-message">
+      <div
+        id="notification_4"
+        class="notification-container notification-container-message notification-container--read"
+      >
         <img
           src="./assets/images/avatar-rizky-hasanuddin.webp"
           alt="Rizky Hasanuddin photo"
           class="notification__image"
         />
         <p class="notification__text">
-          <span class="notification__info">Rizky Hasanuddin</span> sent you a
-          private message <span id="mark">🔴</span>
+          <span class="notification__person">Rizky Hasanuddin</span> sent you a
+          private message
+          <span id="mark" class="notification__mark read-noti">🔴</span>
         </p>
         <p class="notification__duration">5 days ago</p>
         <p class="notification__private-message">
@@ -83,7 +102,10 @@
           game.
         </p>
       </div>
-      <div class="notification-container notification-container-comment">
+      <div
+        id="notification_5"
+        class="notification-container notification-container-comment notification-container--read"
+      >
         <img
           src="./assets/images/avatar-kimberly-smith.webp"
           alt="Kimberly Smith photo"
@@ -91,8 +113,9 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Kimberly Smith</span> commented on
-            your picture <span id="mark">🔴</span>
+            <span class="notification__person">Kimberly Smith</span> commented
+            on your picture
+            <span id="mark" class="notification__mark read-noti">🔴</span>
           </p>
           <p class="notification__duration">1 week ago</p>
         </div>
@@ -102,7 +125,10 @@
           class="notification__picture"
         />
       </div>
-      <div class="notification-container">
+      <div
+        id="notification_6"
+        class="notification-container notification-container--read"
+      >
         <img
           src="./assets/images/avatar-nathan-peterson.webp"
           alt="Nathan Peterson photo"
@@ -110,17 +136,20 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Nathan Peterson</span> reacted to
+            <span class="notification__person">Nathan Peterson</span> reacted to
             your recent post
-            <span class="notification__post"
+            <span class="notification__info"
               >5 end-game strategies to increase your win rate</span
             >
-            <span id="mark">🔴</span>
+            <span id="mark" class="notification__mark read-noti">🔴</span>
           </p>
           <p class="notification__duration">2 weeks ago</p>
         </div>
       </div>
-      <div class="notification-container">
+      <div
+        id="notification_7"
+        class="notification-container notification-container--read"
+      >
         <img
           src="./assets/images/avatar-anna-kim.webp"
           alt="Anna Kim photo"
@@ -128,12 +157,15 @@
         />
         <div class="notification__text-container">
           <p class="notification__text">
-            <span class="notification__info">Anna Kim</span> left the group
-            Chess Club <span id="mark">🔴</span>
+            <span class="notification__person">Anna Kim</span> left the group
+            <span class="notification__info">Chess Club</span>
+            <span id="mark" class="notification__mark read-noti">🔴</span>
           </p>
           <p class="notification__duration">2 weeks ago</p>
         </div>
       </div>
     </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>

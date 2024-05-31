@@ -1,6 +1,24 @@
+@font-face {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  src: url("./assets/fonts/static/PlusJakartaSans-ExtraBold.ttf"),
+    url("./assets/fonts/static/PlusJakartaSans-Medium.ttf");
+  font-size: 16px;
+  font-weight: 500, 800;
+}
+
 body {
   margin: 0px;
-  background-color: cyan;
+  width: 100%;
+  background-color: hsl(210, 60%, 98%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(219, 12%, 42%);
 }
 
 p {
@@ -14,16 +32,34 @@ p {
   max-width: 660px;
   width: calc(100% - 80px);
   margin: 5px;
-  background-color: darkcyan;
+  background-color: hsl(0, 0%, 100%);
 
   display: flex;
   flex-direction: column;
+  border-radius: 10px;
 }
 
 .notification-main__text-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.notification-main__title {
+  font-size: 1.5em;
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.notification-main__count {
+  padding: 0px 10px;
+  background-color: hsl(219, 85%, 26%);
+  color: hsl(210, 60%, 98%);
+  border-radius: 5px;
+}
+
+.notification-main__text {
+  margin: 0px;
 }
 
 .notification-container {
@@ -33,12 +69,39 @@ p {
   display: grid;
   grid-template-columns: 90px auto;
   grid-template-rows: auto auto;
+
+  border-radius: 5px;
+}
+
+.notification-container--unread {
+  background-color: hsl(205, 33%, 90%);
+}
+
+.notification-container--read {
+  background-color: hsl(0, 0%, 100%);
 }
 
 .notification__image {
   justify-self: center;
   grid-row: span 2;
   width: 50px;
+}
+
+.notification__person {
+  font-weight: 800;
+  color: hsl(224, 21%, 14%);
+}
+
+.notification__info {
+  font-weight: 800;
+}
+
+.notification__mark {
+  font-size: 10px;
+}
+
+.read-noti {
+  visibility: hidden;
 }
 
 .notification-container-message {
@@ -49,6 +112,9 @@ p {
   grid-column: 2 / 3;
   padding: 15px;
   margin: 0px;
+
+  border: 1px solid hsla(219, 12%, 42%, 0.25);
+  border-radius: 5px;
 }
 
 .notification-container-comment {
@@ -58,4 +124,30 @@ p {
 .notification__picture {
   justify-self: end;
   width: 50px;
+}
+
+.notification-main__text:hover,
+.notification__person:hover,
+.notification__info:hover {
+  cursor: pointer;
+  color: hsl(219, 85%, 26%);
+}
+
+.notification-container:hover {
+  cursor: pointer;
+}
+
+.notification__private-message:hover {
+  cursor: pointer;
+  background-color: hsl(211, 68%, 94%);
+}
+
+.notification__picture:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
 }
